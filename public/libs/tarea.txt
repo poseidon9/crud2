@@ -1,0 +1,17 @@
+tarea
+Interfaz dashboard web
+Interfaz dashboard movil
+cerrra sesion movil
+cerra session web
+formulario de alta de eventos
+
+
+
+Agregar evento
+nombre
+fecha
+descricpion
+
+
+
+$Erver2015#UT

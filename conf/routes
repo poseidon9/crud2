@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+POST 	/users						     controllers.UsersController.createUser()
+GET		/users						     controllers.UsersController.getAllUsers()
+POST    /access_tokens                   controllers.AccessTokenController.generateAccess()
+GET     /access_tokens                   controllers.AccessTokenController.getAllTokens()
+POST 	/events/:id  				     controllers.EventController.addEvent(id:Int)
+GET		/events						     controllers.EventController.getAllEvents()
+
+GET     /users/:id/events                controllers.EventController.getUserEvents(id:Int)
+POST 	/users/:userId/events/:eventId   controllers.EventController.inviteGuest(userId:Int,eventId:Int)
+
+#GET     /users/:userId/events/:eventId/photos     controllers.PhotoController.getAllPhotos(userId:Int, eventId:Int)
+#POST    /users/:userId/events/:eventId/photos     controllers.PhotoController.uploadPhoto(userId:Int, eventId:Int)
+
+#POST   /users/id/own_events             controllers.EventController.getUserEvents()
+#GET		/events						 controllers.EventController.getAllEvents()
+#GET     /users/:id/events               controllers.EventController.getAllTokens()
+#POST    /users/:id/own_events/:id/guest controllers.EventController.getUserEvents()
+#users/33/evets
+#agreguen los servicios en web y movil
+#/users/:id/events
